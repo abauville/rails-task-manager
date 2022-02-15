@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>New task</h1>
+  <% if @task.errors.any? %>
+    <% @task.errors.full_messages.each do |msg| %>
+      <p class="alert alert-danger"><%= msg %></p>
+    <% end %>
+  <% end %>
+  <%= render "tasks/form" %>
+</div>
